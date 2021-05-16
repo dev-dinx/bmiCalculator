@@ -11,6 +11,9 @@ import UIKit
 class ResultViewController: UIViewController {
     
     var bmiValue : String? // 실제 bmi의 값이 무엇일지 모르기 때문에 옵셔널을 사용
+    var advice: String?
+    var color : UIColor?
+    
     
     @IBOutlet weak var bmiResult: UILabel!
     @IBOutlet weak var adviceLabel: UILabel!
@@ -19,6 +22,8 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
         
         bmiResult.text = bmiValue
+        adviceLabel.text = advice
+        view.backgroundColor = color
     }
    
     @IBAction func recalculateButton(_ sender: UIButton) {

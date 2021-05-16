@@ -47,6 +47,8 @@ class CalculateViewController: UIViewController {
         if segue.identifier == "goToResult" { // segue와 철자가 다를 시 충돌이 일어나는 것을 방지
             let destinationVC = segue.destination as! ResultViewController // segue의 대상이 실제로 ResultViewController 임을 설정
             destinationVC.bmiValue = calculaterBrain.getBMIValue()
+            destinationVC.advice = calculaterBrain.getAdvice()
+            destinationVC.color = calculaterBrain.getColor()
         }
         
     }
